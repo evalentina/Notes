@@ -15,8 +15,43 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="HEe-t6-Mqs">
+                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HcN-No-BMb">
+                                <rect key="frame" x="0.0" y="139" width="414" height="697"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hic-lf-vRu">
+                                <rect key="frame" x="0.0" y="836" width="414" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="gCc-CV-Hjc"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" id="6wa-af-ZJY">
+                                        <connections>
+                                            <segue destination="KoL-Q8-ekm" kind="show" id="ZIZ-uq-6bC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Hic-lf-vRu" secondAttribute="bottom" id="BS1-Et-gYF"/>
+                            <constraint firstItem="HEe-t6-Mqs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NSc-GE-Q1Z"/>
+                            <constraint firstItem="HcN-No-BMb" firstAttribute="top" secondItem="HEe-t6-Mqs" secondAttribute="bottom" id="SPO-My-GdO"/>
+                            <constraint firstItem="HEe-t6-Mqs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="a4S-q4-W5n"/>
+                            <constraint firstItem="Hic-lf-vRu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="a8W-gO-j4E"/>
+                            <constraint firstItem="HcN-No-BMb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="clI-On-kX8"/>
+                            <constraint firstItem="Hic-lf-vRu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e0Y-P2-l66"/>
+                            <constraint firstItem="HEe-t6-Mqs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sib-TO-7qE"/>
+                            <constraint firstItem="Hic-lf-vRu" firstAttribute="top" secondItem="HcN-No-BMb" secondAttribute="bottom" id="vm9-EV-rab"/>
+                            <constraint firstItem="HcN-No-BMb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yNz-bZ-Jz4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Azy-Yh-ET9"/>
                 </viewController>
@@ -34,6 +69,7 @@
                         <viewLayoutGuide key="safeArea" id="KBW-2b-aCd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Zf9-xv-c3u"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3EP-Yu-nFt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
