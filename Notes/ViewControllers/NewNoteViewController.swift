@@ -9,6 +9,11 @@ import UIKit
 
 class NewNoteViewController: UIViewController {
 
+    @IBOutlet weak var noteTextView: UITextView!
+    @IBOutlet weak var noteTitleField: UITextField!
+    @IBOutlet weak var newNoteToolBar: UIToolbar!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
