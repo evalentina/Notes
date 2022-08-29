@@ -10,12 +10,14 @@ import Foundation
 class Note: Codable, Identifiable {
     
     var title: String
-    var body: String
+    var content: String
     var id = UUID()
     var date = Date()
-    var pinned: Bool = false
-    init(title: String, body: String) {
+    var pinn: Bool = false
+    
+    init(title: String, content: String) {
+        
         self.title = title
-        self.body = body
+        self.content = content
     }
 }

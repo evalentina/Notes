@@ -15,6 +15,9 @@
 		C8DC73A028BBF4AB006BD3E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8DC739E28BBF4AB006BD3E0 /* LaunchScreen.storyboard */; };
 		C8DC73A928BBF5CF006BD3E0 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DC73A828BBF5CF006BD3E0 /* NewNoteViewController.swift */; };
 		C8DC73AC28BCB7A7006BD3E0 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DC73AB28BCB7A7006BD3E0 /* Note.swift */; };
+		C8DC73AE28BCC336006BD3E0 /* ExtensionNewNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DC73AD28BCC336006BD3E0 /* ExtensionNewNote.swift */; };
+		C8DC73B328BCFB98006BD3E0 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DC73B128BCFB98006BD3E0 /* NoteTableViewCell.swift */; };
+		C8DC73B428BCFB98006BD3E0 /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8DC73B228BCFB98006BD3E0 /* NoteTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		C8DC73A128BBF4AB006BD3E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8DC73A828BBF5CF006BD3E0 /* NewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
 		C8DC73AB28BCB7A7006BD3E0 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		C8DC73AD28BCC336006BD3E0 /* ExtensionNewNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionNewNote.swift; sourceTree = "<group>"; };
+		C8DC73B128BCFB98006BD3E0 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		C8DC73B228BCFB98006BD3E0 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				C8DC73A828BBF5CF006BD3E0 /* NewNoteViewController.swift */,
+				C8DC73AD28BCC336006BD3E0 /* ExtensionNewNote.swift */,
 				C8DC739728BBF4A6006BD3E0 /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
@@ -85,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				C8DC73AB28BCB7A7006BD3E0 /* Note.swift */,
+				C8DC73B128BCFB98006BD3E0 /* NoteTableViewCell.swift */,
+				C8DC73B228BCFB98006BD3E0 /* NoteTableViewCell.xib */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,6 +159,7 @@
 				C8DC73A028BBF4AB006BD3E0 /* LaunchScreen.storyboard in Resources */,
 				C8DC739D28BBF4AB006BD3E0 /* Assets.xcassets in Resources */,
 				C8DC739B28BBF4A6006BD3E0 /* Main.storyboard in Resources */,
+				C8DC73B428BCFB98006BD3E0 /* NoteTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +174,8 @@
 				C8DC739828BBF4A6006BD3E0 /* HomeViewController.swift in Sources */,
 				C8DC73A928BBF5CF006BD3E0 /* NewNoteViewController.swift in Sources */,
 				C8DC739428BBF4A6006BD3E0 /* AppDelegate.swift in Sources */,
+				C8DC73AE28BCC336006BD3E0 /* ExtensionNewNote.swift in Sources */,
+				C8DC73B328BCFB98006BD3E0 /* NoteTableViewCell.swift in Sources */,
 				C8DC739628BBF4A6006BD3E0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
