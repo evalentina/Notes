@@ -8,9 +8,28 @@
 import Foundation
 import UIKit
 
-extension NewNoteViewController: UITextViewDelegate, UIScrollViewDelegate {
+extension NewNoteViewController {
     
+    func willSaveNewNote() {
+        guard var title = noteTitleField.text?.trimmingCharacters(in: .whitespaces) else { return }
+        guard var content = noteTextView.text?.trimmingCharacters(in: .whitespaces) else { return }
+        
+        if title.isEmpty {
+            title = "Unnamed"
+        }
+        if content.isEmpty {
+            content = "No content"
+        }
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func didClearNewNote() {
+        noteTitleField.text? = ""
+        noteTextView.text? = ""
+        
+    }
 }
+
 
 
 

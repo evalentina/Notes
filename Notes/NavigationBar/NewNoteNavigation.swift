@@ -10,25 +10,22 @@ import UIKit
 
 class NewNoteNavigationBar {
     
-  var newNoteVC = NewNoteViewController()
-
-  func configurationNavigationItems() {
-      
-      let doneItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneItemAction))
-      let shareItem = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(shareItemAction))
-      
-      doneItem.tintColor = .systemYellow
-      shareItem.tintColor = .systemYellow
-      
-      let rightBarItems = [doneItem, shareItem]
-      newNoteVC.navigationItem.rightBarButtonItems = rightBarItems
-  }
+    var newNoteVC = NewNoteViewController()
     
-    @objc func doneItemAction() {
-      newNoteDelegate?.willSaveNewNote()
+    
+    func configurationNavigationItems() {
+        let doneItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneItemAction))
+        let shareItem = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(shareItemAction))
+        doneItem.tintColor = .systemYellow
+        shareItem.tintColor = .systemYellow
+        let rightBarItems = [doneItem, shareItem]
+        newNoteVC.navigationItem.rightBarButtonItems = rightBarItems
+        
     }
-    
+    @objc func doneItemAction() {
+        newNoteVC.willSaveNewNote()
+    }
     @objc func shareItemAction() {
-      newNoteDelegate?.didShareNote()
+        
     }
 }

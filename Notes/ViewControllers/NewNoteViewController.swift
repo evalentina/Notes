@@ -15,15 +15,17 @@ class NewNoteViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     var note : Note?
+    var navigationBar = NewNoteNavigationBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureKeyboardNotifications()
+        configureNoteWhileEditing()
+        navigationBar.configurationNavigationItems()        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         noteTitleField.becomeFirstResponder()
     }
     
@@ -31,6 +33,12 @@ class NewNoteViewController: UIViewController {
       let notificationCenter = NotificationCenter.default
       notificationCenter.addObserver(self, selector: #selector(adjustKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
       notificationCenter.addObserver(self, selector: #selector(adjustKeyboard), name: UIResponder.keyboardDidHideNotification, object: nil)
+    }
+    
+    private func configureNoteWhileEditing() {
+        guard let note = self.note else { return }
+        noteTitleField.text = note.title
+        noteTextView.text = note.content
     }
     
     @objc func adjustKeyboard(notification: Notification) {
