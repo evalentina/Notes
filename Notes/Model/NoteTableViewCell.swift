@@ -9,15 +9,32 @@ import UIKit
 
 class NoteTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var noteTitle: UILabel!
+    @IBOutlet weak var noteContent: UILabel!
+    @IBOutlet weak var noteDate: UILabel!
+    
+    
+    var note: Note? {
+        didSet {
+            configureNoteTitle(title: note?.title)
+            configureNoteContent(content: note?.content)
+        }
     }
+    
+    private func configureNoteTitle(title: String?) {
+        
+      guard let title = title else { return }
+      noteTitle.text = title
+    }
+    
+    private func configureNoteContent(content: String?) {
+      guard let content = content?.trimmingCharacters(in: .whitespaces) else { return }
+      noteContent.text = content
+    }
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+      super.setSelected(selected, animated: animated)
     }
     
 }

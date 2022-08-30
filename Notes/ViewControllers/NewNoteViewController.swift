@@ -18,10 +18,6 @@ class NewNoteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        noteTitleField.delegate = self
-        noteTextView.delegate = self
-        scrollView.delegate = self
         configureKeyboardNotifications()
     }
     
@@ -48,5 +44,4 @@ class NewNoteViewController: UIViewController {
       let selectedRange = noteTextView.selectedRange
         noteTextView.scrollRangeToVisible(selectedRange)
     }
-
 }

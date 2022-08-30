@@ -53,6 +53,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="noteContent" destination="qeE-SX-ViN" id="IWg-ce-9Jj"/>
+                <outlet property="noteDate" destination="0n4-XD-YEQ" id="XKk-I4-vXe"/>
+                <outlet property="noteTitle" destination="gC4-GK-6Ha" id="Xae-uu-VzN"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="104.79910714285714"/>
         </tableViewCell>
     </objects>
