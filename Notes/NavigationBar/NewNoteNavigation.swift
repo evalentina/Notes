@@ -10,9 +10,8 @@ import UIKit
 
 class NewNoteNavigationBar {
     
-    var newNoteVC = NewNoteViewController()
-    
-    
+    weak var newNoteVC = NewNoteViewController()
+        
     func configurationNavigationItems() {
         let doneItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneItemAction))
         let shareItem = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(shareItemAction))

@@ -21,7 +21,8 @@ class NewNoteViewController: UIViewController {
         super.viewDidLoad()
         configureKeyboardNotifications()
         configureNoteWhileEditing()
-        navigationBar.configurationNavigationItems()        
+        navigationBar.configurationNavigationItems()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
