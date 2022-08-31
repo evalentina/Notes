@@ -15,13 +15,13 @@ class NewNoteViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     var note : Note?
-    var navigationBar = NewNoteNavigationBar()
+    private lazy var newNoteNavigation = NewNoteNavigationBar(newNoteVC: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureKeyboardNotifications()
         configureNoteWhileEditing()
-        navigationBar.configurationNavigationItems()
+        newNoteNavigation.configurationNavigationItems()
         
     }
     

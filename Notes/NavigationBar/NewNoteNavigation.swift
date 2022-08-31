@@ -10,7 +10,13 @@ import UIKit
 
 class NewNoteNavigationBar {
     
-    weak var newNoteVC = NewNoteViewController()
+    weak var newNoteVC : UIViewController?
+    
+    init(newNoteVC: UIViewController) {
+      self.newNoteVC = newNoteVC
+    }
+    
+    deinit { print("NewNavigationBar deinited") }
         
     func configurationNavigationItems() {
         let doneItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneItemAction))
@@ -18,11 +24,12 @@ class NewNoteNavigationBar {
         doneItem.tintColor = .systemYellow
         shareItem.tintColor = .systemYellow
         let rightBarItems = [doneItem, shareItem]
-        newNoteVC.navigationItem.rightBarButtonItems = rightBarItems
+        newNoteVC?.navigationItem.rightBarButtonItems = rightBarItems
         
     }
     @objc func doneItemAction() {
-        newNoteVC.willSaveNewNote()
+        print("Save")
+        //newNoteVC?.willSaveNewNote()
     }
     @objc func shareItemAction() {
         

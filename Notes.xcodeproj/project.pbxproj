@@ -19,8 +19,8 @@
 		C8DC73B328BCFB98006BD3E0 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DC73B128BCFB98006BD3E0 /* NoteTableViewCell.swift */; };
 		C8DC73B428BCFB98006BD3E0 /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8DC73B228BCFB98006BD3E0 /* NoteTableViewCell.xib */; };
 		C8DC73B728BE52F3006BD3E0 /* NewNoteNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DC73B628BE52F3006BD3E0 /* NewNoteNavigation.swift */; };
-		C8DC73B928BE5625006BD3E0 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DC73B828BE5625006BD3E0 /* Protocols.swift */; };
 		C8DC73BE28BE731E006BD3E0 /* HomeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DC73BD28BE731E006BD3E0 /* HomeNavigationBar.swift */; };
+		C8DC73C028BE74D2006BD3E0 /* AlertSheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DC73BF28BE74D2006BD3E0 /* AlertSheets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +38,8 @@
 		C8DC73B128BCFB98006BD3E0 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		C8DC73B228BCFB98006BD3E0 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
 		C8DC73B628BE52F3006BD3E0 /* NewNoteNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteNavigation.swift; sourceTree = "<group>"; };
-		C8DC73B828BE5625006BD3E0 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		C8DC73BD28BE731E006BD3E0 /* HomeNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationBar.swift; sourceTree = "<group>"; };
+		C8DC73BF28BE74D2006BD3E0 /* AlertSheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSheets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,6 @@
 				C8DC739C28BBF4AB006BD3E0 /* Assets.xcassets */,
 				C8DC739E28BBF4AB006BD3E0 /* LaunchScreen.storyboard */,
 				C8DC73A128BBF4AB006BD3E0 /* Info.plist */,
-				C8DC73B828BE5625006BD3E0 /* Protocols.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -111,6 +110,7 @@
 			children = (
 				C8DC73B628BE52F3006BD3E0 /* NewNoteNavigation.swift */,
 				C8DC73BD28BE731E006BD3E0 /* HomeNavigationBar.swift */,
+				C8DC73BF28BE74D2006BD3E0 /* AlertSheets.swift */,
 			);
 			path = NavigationBar;
 			sourceTree = "<group>";
@@ -189,8 +189,8 @@
 			files = (
 				C8DC73AC28BCB7A7006BD3E0 /* Note.swift in Sources */,
 				C8DC739828BBF4A6006BD3E0 /* HomeViewController.swift in Sources */,
+				C8DC73C028BE74D2006BD3E0 /* AlertSheets.swift in Sources */,
 				C8DC73B728BE52F3006BD3E0 /* NewNoteNavigation.swift in Sources */,
-				C8DC73B928BE5625006BD3E0 /* Protocols.swift in Sources */,
 				C8DC73A928BBF5CF006BD3E0 /* NewNoteViewController.swift in Sources */,
 				C8DC739428BBF4A6006BD3E0 /* AppDelegate.swift in Sources */,
 				C8DC73BE28BE731E006BD3E0 /* HomeNavigationBar.swift in Sources */,
