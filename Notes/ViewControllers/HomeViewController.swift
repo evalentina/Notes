@@ -9,17 +9,17 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    var homeNavigationBar : HomeNavigationBar {
-        return HomeNavigationBar(homeViewController: self, alertSheets: AlertSheets())
-    }
+    var homeNavigationBar : HomeNavigationBar?
 
     override func viewDidLoad() {
-        
-        
         super.viewDidLoad()
-        homeNavigationBar.buildNavigationBarItems()
-        homeNavigationBar.alertSheets?.alertConfiguration()
+        configurationNavigationBar()
         
+    }
+    
+    private func configurationNavigationBar() {
+      homeNavigationBar = HomeNavigationBar(homeViewController: self)
+      homeNavigationBar?.buildNavigationBarItems()
     }
 
 
