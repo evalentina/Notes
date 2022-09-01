@@ -18,9 +18,14 @@ class Notes: Codable {
         return notes.filter { !$0.pinn }
     }
     
-    init(notes: [Note]) {
+    init() {
         self.notes = UserDefaults.standard.load(key: key, obj: Notes.self)?.notes ?? [Note]()
     }
+    
+    init(notes: [Note]) {
+      self.notes = notes
+    }
+
     
     public func saveNotesToLocal() {
     }
