@@ -23,17 +23,17 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0n4-XD-YEQ">
-                        <rect key="frame" x="20" y="52" width="280" height="16"/>
+                        <rect key="frame" x="20" y="53" width="280" height="16"/>
                         <fontDescription key="fontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeE-SX-ViN">
-                        <rect key="frame" x="20" y="31" width="280" height="16"/>
+                        <rect key="frame" x="20" y="31" width="280" height="17"/>
                         <attributedString key="attributedText">
                             <fragment content="Label">
                                 <attributes>
-                                    <font key="NSFont" size="14" name=".SFNS-Regular"/>
+                                    <font key="NSFont" metaFont="menu" size="14"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
