@@ -11,9 +11,20 @@ import UIKit
 extension NewNoteViewController: NewNoteDelegate {
     
     func willSaveNewNote() {
-        print("Save")
+        
+        guard var title = noteTitleField.text?.trimmingCharacters(in: .whitespaces) else { return }
+        guard var body = noteTextView.text?.trimmingCharacters(in: .whitespaces) else { return }
+
+        if title == "" {
+          title = "Unnamed"
+        }
+
+        if body == "" {
+          body = "No content"
+        }
       
-    }    
+    }
+    
     func didClearNewNote() {
         noteTitleField.text? = ""
         noteTextView.text? = ""

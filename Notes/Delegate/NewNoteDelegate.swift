@@ -8,5 +8,7 @@
 import Foundation
 
 protocol NewNoteDelegate: AnyObject {
-  func willSaveNewNote()
+    
+    func willSaveNewNote()
+    func didClearNewNote()
 }
