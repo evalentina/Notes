@@ -22,11 +22,12 @@ class NewNoteViewController: UIViewController {
         configurationNavigationBar()
         configureKeyboardNotifications()
         configureNoteWhileEditing()
+        newNoteNavigationBar?.newNoteDelegate = self
         
     }
     
     private func configurationNavigationBar() {
-        newNoteNavigationBar = NewNoteNavigationBar(newNoteVC: self)
+        newNoteNavigationBar = NewNoteNavigationBar(newNoteViewController: self)
         newNoteNavigationBar?.configurationNavigationItems()
         
     }
@@ -60,3 +61,6 @@ class NewNoteViewController: UIViewController {
         noteTextView.scrollRangeToVisible(selectedRange)
     }
 }
+
+
+
