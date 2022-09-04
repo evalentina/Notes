@@ -15,9 +15,9 @@ class HomeNavigationBar {
     init(homeViewController: UIViewController) {
         self.homeViewController = homeViewController
     }
-
+    
     deinit {
-      print("\(self) deinited")
+        // HomeNavigationBar deinited
     }
     
     open func configurationNavigationBarItems() {

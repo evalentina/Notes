@@ -8,3 +8,15 @@
 import Foundation
 
 public let key = "Key"
+public let noteCell = "NoteCell"
+
+enum NoteSceneType {
+  case isCreatingNewNote
+  case isEditingNote
+}
+
+enum HomeConstants {
+  //static let notesCellId: String = "NOTES_CELL"
+  static let goToNewNoteVCSegueId: String = "goToNewNoteVC"
+  static let goToEditNoteSegueId: String = "goToEditNoteVC"
+}

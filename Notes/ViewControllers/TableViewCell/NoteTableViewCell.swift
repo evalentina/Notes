@@ -8,33 +8,40 @@
 import UIKit
 
 class NoteTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var noteTitle: UILabel!
-    @IBOutlet weak var noteContent: UILabel!
-    @IBOutlet weak var noteDate: UILabel!
     
+    
+    @IBOutlet weak var titleNote: UILabel!
+    @IBOutlet weak var contentNote: UILabel!    
+    @IBOutlet weak var dateNote: UILabel!
     
     var note: Note? {
-        didSet {
-            configureNoteTitle(title: note?.title)
-            configureNoteContent(content: note?.content)
-        }
+      didSet {
+        configureTitleLabel(text: note?.title)
+        configureBodyLabel(text: note?.content)
+      }
     }
-    
-    private func configureNoteTitle(title: String?) {
-        
-      guard let title = title else { return }
-      noteTitle.text = title
+
+    required init?(coder: NSCoder) {
+      super.init(coder: coder)
     }
-    
-    private func configureNoteContent(content: String?) {
-      guard let content = content?.trimmingCharacters(in: .whitespaces) else { return }
-      noteContent.text = content
+
+    override func awakeFromNib() {
+      super.awakeFromNib()
     }
-    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
       super.setSelected(selected, animated: animated)
     }
-    
+  }
+
+  extension NoteTableViewCell {
+    private func configureTitleLabel(text: String?) {
+      guard let text = text else { return }
+      titleNote.text = text
+    }
+
+    private func configureBodyLabel(text: String?) {
+      guard let text = text?.trimmingCharacters(in: .whitespaces) else { return }
+      contentNote.text = text
+    }
 }

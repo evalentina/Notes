@@ -28,6 +28,13 @@ class Notes: Codable {
 
     
     public func saveNotesToLocal() {
+        UserDefaults.standard.save(key: key, obj: self)
+    }
+    
+    func copy(with zone: NSZone? = nil) -> Any {
+        let copiedNotes = Notes(notes: notes)
+        return copiedNotes
+        
     }
     
     public func updateNote(_ filteredNotes: inout [Note], _ isFiltering: Bool, noteIndex: Int, title: String, content: String) {
@@ -38,7 +45,7 @@ class Notes: Codable {
     }
     
     public func insertNewNote(_ filteredNotes: inout [Note], _ isFiltering: Bool, note: Note) {
-
+        
       notes.insert(note, at: pinnedNotes.count == 0 ? 0 : pinnedNotes.count)
       if !isFiltering {
         filteredNotes = notes

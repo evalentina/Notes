@@ -7,7 +7,8 @@
 
 import Foundation
 
-protocol NoteDelegate: AnyObject {
-  func didSaveNote(note: Note)
-  func didEditNote(noteIndexPath: IndexPath, title: String, body: String)
+protocol NotesDelegate: AnyObject {
+    func didSaveNote(note: Note)
+    func didEditNote(noteIndexPath: IndexPath, title: String, content: String)
+    
 }

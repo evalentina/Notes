@@ -10,9 +10,8 @@ import Foundation
 extension UserDefaults {
     
   func save<T: Codable>(key: String, obj: T) -> Void {
-      if let data = try? JSONEncoder().encode(obj) {
-          self.set(data, forKey: key)
-    }
+        let data = try? JSONEncoder().encode(obj)
+        self.set(data, forKey: key)
   }
 
   func load<T: Codable>(key: String, obj: T.Type) -> T? {

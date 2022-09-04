@@ -16,6 +16,10 @@ class NewNoteViewController: UIViewController {
     
     var note : Note?
     var newNoteNavigationBar : NewNoteNavigationBar?
+    var noteSceneType: NoteSceneType = .isCreatingNewNote
+    weak var notesDelegate: NotesDelegate?
+    var noteIndexPath = IndexPath(row: 0, section: 0)
+    var notes: Notes? 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +27,14 @@ class NewNoteViewController: UIViewController {
         configureKeyboardNotifications()
         configureNoteWhileEditing()
         newNoteNavigationBar?.newNoteDelegate = self
+        configureNoteIfEditing()
         
+    }
+    
+    private func configureNoteIfEditing() {
+      guard let note = self.note else { return }
+      noteTitleField.text = note.title
+      noteTextView.text = note.content
     }
     
     private func configurationNavigationBar() {

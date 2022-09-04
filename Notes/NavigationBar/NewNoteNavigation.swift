@@ -17,7 +17,9 @@ class NewNoteNavigationBar {
         self.newNoteViewController = newNoteViewController
     }
     
-    deinit { print("NewNavigationBar deinited") }
+    deinit {
+        // NewNavigationBar deinited
+    }
         
     func configurationNavigationItems() {
         let doneItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneItemAction))
@@ -29,6 +31,6 @@ class NewNoteNavigationBar {
     }
     @objc func doneItemAction() {
         newNoteDelegate?.willSaveNewNote()
-        newNoteViewController?.navigationController?.popViewController(animated: true)
+        
     }
 }
