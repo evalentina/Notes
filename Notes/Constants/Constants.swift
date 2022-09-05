@@ -16,7 +16,6 @@ enum NoteSceneType {
 }
 
 enum HomeConstants {
-  //static let notesCellId: String = "NOTES_CELL"
   static let goToNewNoteVCSegueId: String = "goToNewNoteVC"
   static let goToEditNoteSegueId: String = "goToEditNoteVC"
 }

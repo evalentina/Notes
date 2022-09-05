@@ -60,8 +60,28 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHandler) in
+            let globalIndex: Int = self.getIndexForSection(in: indexPath)
+            self.notes.deleteNote(&self.filteredNotes, self.isFiltering, noteIndex: globalIndex)
+            self.tableViewNotes.deleteRows(at: [indexPath], with: .left)
+            if self.tableViewNotes.numberOfSections == 2, self.notes.pinnedNotes.count == 0 {
+              self.tableSectionsAmount = 1
+                self.tableViewNotes.deleteSections(IndexSet(arrayLiteral: 0), with: .left)
+            }
+        }
+        deleteAction.image = UIImage(systemName: "trash.fill")
+        deleteAction.image?.withTintColor(UIColor.yellow)
+        
+        let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction])
+        swipeConfiguration.performsFirstActionWithFullSwipe = true
+        return swipeConfiguration
         
     }
+
 
   func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
     searchNote.resignFirstResponder()

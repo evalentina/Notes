@@ -8,11 +8,9 @@
 import UIKit
 
 class NoteTableViewCell: UITableViewCell {
-    
-    
+        
     @IBOutlet weak var titleNote: UILabel!
     @IBOutlet weak var contentNote: UILabel!    
-    @IBOutlet weak var dateNote: UILabel!
     
     var note: Note? {
       didSet {

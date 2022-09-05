@@ -24,7 +24,7 @@ class NewNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurationNavigationBar()
-        configureKeyboardNotifications()
+        //configureKeyboardNotifications()
         configureNoteWhileEditing()
         newNoteNavigationBar?.newNoteDelegate = self
         configureNoteIfEditing()
@@ -59,7 +59,6 @@ class NewNoteViewController: UIViewController {
         noteTitleField.text = note.title
         noteTextView.text = note.content
     }
-    
     @objc func adjustKeyboard(notification: Notification) {
       guard let keyboardValue: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
       let keyboardScreenFrame: CGRect = keyboardValue.cgRectValue

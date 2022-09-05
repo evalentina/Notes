@@ -29,6 +29,7 @@ class HomeViewController: UIViewController {
         tableViewNotes.delegate = self
         searchNote.delegate = self
         configureNavigationBar()
+        configureTableView()
         configureGestures()
         
     }
@@ -54,6 +55,11 @@ class HomeViewController: UIViewController {
     
     deinit {
         // HomeViewController deinited
+    }
+
+    private func configureTableView() {
+        tableViewNotes.layer.cornerRadius = 10
+        tableViewNotes.layer.masksToBounds = true
     }
     
     private func configureNavigationBar() {
