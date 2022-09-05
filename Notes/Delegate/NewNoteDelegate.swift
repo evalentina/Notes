@@ -7,7 +7,8 @@
 
 import Foundation
 
-protocol NewNoteDelegate: AnyObject {    
+protocol NewNoteDelegate: AnyObject {
+    
     func willSaveNewNote()
     func didClearNewNote()
 }

@@ -30,21 +30,22 @@ extension NewNoteViewController: NewNoteDelegate {
             editNote(title: title, content: content)
         }
         navigationController?.popViewController(animated: true)
-      
     }
     
     func didClearNewNote() {
+        
         noteTitleField.text? = ""
         noteTextView.text? = ""
-        
     }
     
     private func createNewNote(title: String, content: String) {
-      let note = Note(title: title, content: content)
-      notesDelegate?.didSaveNote(note: note)
+        
+        let note = Note(title: title, content: content)
+        notesDelegate?.didSaveNote(note: note)
     }
-
+    
     private func editNote(title: String, content: String) {
+        
         notesDelegate?.didEditNote(noteIndexPath: noteIndexPath, title: title, content: content)
     }
 }

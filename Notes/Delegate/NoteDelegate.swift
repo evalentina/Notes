@@ -8,6 +8,7 @@
 import Foundation
 
 protocol NotesDelegate: AnyObject {
+    
     func didSaveNote(note: Note)
     func didEditNote(noteIndexPath: IndexPath, title: String, content: String)
     

@@ -11,6 +11,7 @@ import UIKit
 extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: noteCell, for: indexPath) as! NoteTableViewCell
         let globalIndex: Int = getIndexForSection(in: indexPath)
         let note = filteredNotes[globalIndex]
@@ -23,6 +24,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func getIndexForSection(in indexPath: IndexPath) -> Int {
+        
         var sumRowsBySection: Int = 0
         for section in 0 ..< indexPath.section {
             sumRowsBySection += tableViewNotes.numberOfRows(inSection: section)
@@ -32,6 +34,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         guard tableView.numberOfSections > 1 else { return filteredNotes.count }
         var rowsInSection: Int {
             if tableView.numberOfSections == 2, section == 0 {
@@ -43,6 +46,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
         guard tableView.numberOfSections == 2 else {
             return ""
         }
@@ -108,9 +112,9 @@ extension HomeViewController: UITableViewDelegate {
               tableView.deleteSections(IndexSet(arrayLiteral: 0), with: .left)
             }
         }
-            
         pinAction.image = UIImage(systemName: "pin.fill")
         pinAction.backgroundColor = .systemOrange
+        
         let swipeConfiguration = UISwipeActionsConfiguration(actions: [pinAction])
         swipeConfiguration.performsFirstActionWithFullSwipe = false
         return swipeConfiguration

@@ -13,32 +13,23 @@ class NoteTableViewCell: UITableViewCell {
     @IBOutlet weak var contentNote: UILabel!    
     
     var note: Note? {
+        
       didSet {
         configureTitleLabel(text: note?.title)
-        configureBodyLabel(text: note?.content)
+        configureContentLabel(text: note?.content)
       }
     }
-
-    required init?(coder: NSCoder) {
-      super.init(coder: coder)
-    }
-
-    override func awakeFromNib() {
-      super.awakeFromNib()
-    }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
-      super.setSelected(selected, animated: animated)
+        super.setSelected(selected, animated: animated)
     }
-  }
-
-  extension NoteTableViewCell {
+    
     private func configureTitleLabel(text: String?) {
       guard let text = text else { return }
       titleNote.text = text
     }
-
-    private func configureBodyLabel(text: String?) {
+    
+    private func configureContentLabel(text: String?) {
       guard let text = text?.trimmingCharacters(in: .whitespaces) else { return }
       contentNote.text = text
     }

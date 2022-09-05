@@ -14,6 +14,7 @@ class NewNoteNavigationBar {
     weak var newNoteDelegate: NewNoteDelegate?
     
     init(newNoteViewController: UIViewController) {
+        
         self.newNoteViewController = newNoteViewController
     }
     
@@ -22,15 +23,16 @@ class NewNoteNavigationBar {
     }
         
     func configurationNavigationItems() {
+        
         let doneItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneItemAction))
         doneItem.tintColor = .systemYellow
         let rightBarItem: [UIBarButtonItem] = [doneItem]
         newNoteViewController?.navigationItem.rightBarButtonItems = rightBarItem
         newNoteViewController?.navigationItem.rightBarButtonItem?.tintColor = .systemYellow
-        
     }
+    
     @objc func doneItemAction() {
-        newNoteDelegate?.willSaveNewNote()
         
+        newNoteDelegate?.willSaveNewNote()
     }
 }
