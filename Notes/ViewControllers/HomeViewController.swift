@@ -87,6 +87,14 @@ class HomeViewController: UIViewController {
             
         }
     }
+    
+    func setupInitialSections() {
+        if tableViewNotes.numberOfSections == 1, notes.pinnedNotes.count > 0, !didSetupSections {
+
+        tableSectionsAmount = 2
+        didSetupSections = true
+      }
+    }
 }
 
 extension HomeViewController: NotesDelegate {
