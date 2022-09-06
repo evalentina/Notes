@@ -24,7 +24,6 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Notes"
         tableViewNotes.dataSource = self
         tableViewNotes.delegate = self
         searchNote.delegate = self
