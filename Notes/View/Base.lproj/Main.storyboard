@@ -74,6 +74,9 @@
                                             <segue destination="KoL-Q8-ekm" kind="show" identifier="goToNewNoteVC" id="ZIZ-uq-6bC"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem width="127" style="plain" systemItem="fixedSpace" id="HjT-Gu-nkZ"/>
+                                    <barButtonItem title="0 Notes" id="G09-nx-5ax"/>
+                                    <barButtonItem width="164" style="plain" systemItem="fixedSpace" id="M1y-It-8Cm"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -94,6 +97,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Notes" id="Azy-Yh-ET9"/>
                     <connections>
+                        <outlet property="notesCountToolBar" destination="G09-nx-5ax" id="2Yl-ro-hqQ"/>
                         <outlet property="searchNote" destination="HEe-t6-Mqs" id="y7h-f5-fEt"/>
                         <outlet property="tableViewNotes" destination="HcN-No-BMb" id="cGL-7A-EcY"/>
                     </connections>

@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
         
     @IBOutlet weak var searchNote: UISearchBar!
     @IBOutlet weak var tableViewNotes: UITableView!
+    @IBOutlet weak var notesCountToolBar: UIBarButtonItem!
     
     var homeNavigationBar: HomeNavigationBar?
     var editIndexPath: IndexPath?
@@ -18,7 +19,7 @@ class HomeViewController: UIViewController {
     var isFiltering: Bool = false
     var didSetupSections: Bool = false
     var tableSectionsAmount: Int = 1
-
+    
     var notes = Notes()
     lazy var filteredNotes: [Note] = (notes.copy(with: nil) as? Notes)?.notes ?? [Note]()
 
@@ -29,6 +30,7 @@ class HomeViewController: UIViewController {
         searchNote.delegate = self
         configureNavigationBar()
         configureTableView()
+        configureToolBar(notes: notes)
         configureGestures()
         
     }
@@ -49,11 +51,16 @@ class HomeViewController: UIViewController {
         if let insertIndexPath = insertIndexPath {
             tableViewNotes.insertRows(at: [insertIndexPath], with: .automatic)
             self.insertIndexPath = nil
+            configureToolBar(notes: notes)
         }
     }
     
     deinit {
         // HomeViewController deinited
+    }
+    
+    private func configureToolBar(notes: Notes) {
+        notesCountToolBar.title = "\(notes.notes.count) Notes"
     }
 
     private func configureTableView() {
