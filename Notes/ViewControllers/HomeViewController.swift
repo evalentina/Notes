@@ -59,7 +59,7 @@ class HomeViewController: UIViewController {
         // HomeViewController deinited
     }
     
-    private func configureToolBar(notes: Notes) {
+    func configureToolBar(notes: Notes) {
         notesCountToolBar.title = "\(notes.notes.count) Notes"
     }
 

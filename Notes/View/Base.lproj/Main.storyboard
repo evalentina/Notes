@@ -74,7 +74,7 @@
                                             <segue destination="KoL-Q8-ekm" kind="show" identifier="goToNewNoteVC" id="ZIZ-uq-6bC"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="127" style="plain" systemItem="fixedSpace" id="HjT-Gu-nkZ"/>
+                                    <barButtonItem width="91" style="plain" systemItem="fixedSpace" id="HjT-Gu-nkZ"/>
                                     <barButtonItem title="0 Notes" id="G09-nx-5ax"/>
                                     <barButtonItem width="164" style="plain" systemItem="fixedSpace" id="M1y-It-8Cm"/>
                                 </items>
@@ -155,25 +155,12 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="mYj-Ye-Zu7"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="FJ2-GM-aZK"/>
                             </scrollView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diP-in-yaD">
-                                <rect key="frame" x="0.0" y="856" width="414" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="HFm-su-hVA"/>
-                                </constraints>
-                                <items/>
-                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KBW-2b-aCd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="diP-in-yaD" firstAttribute="leading" secondItem="KBW-2b-aCd" secondAttribute="leading" id="6Cg-K8-Y3H"/>
-                            <constraint firstAttribute="bottom" secondItem="diP-in-yaD" secondAttribute="bottom" id="6WC-1K-NkX"/>
-                            <constraint firstItem="diP-in-yaD" firstAttribute="trailing" secondItem="KBW-2b-aCd" secondAttribute="trailing" id="DsF-gK-P8A"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zf9-xv-c3u"/>
                     <connections>
-                        <outlet property="newNoteToolBar" destination="diP-in-yaD" id="uji-sQ-5zp"/>
                         <outlet property="noteTextView" destination="TFh-yQ-4hF" id="PFl-li-TNM"/>
                         <outlet property="noteTitleField" destination="Y03-uT-NG3" id="rcl-qI-8rf"/>
                         <outlet property="scrollView" destination="2xp-PX-yng" id="4M9-xp-mJr"/>

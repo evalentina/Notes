@@ -71,6 +71,7 @@ extension HomeViewController: UITableViewDelegate {
                 self.tableSectionsAmount = 1
                 self.tableViewNotes.deleteSections(IndexSet(arrayLiteral: 0), with: .left)
             }
+            self.configureToolBar(notes: self.notes)
             completionHandler(true)
         }
         deleteAction.image = UIImage(systemName: "trash.fill")
