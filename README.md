@@ -1,6 +1,6 @@
 # Notes
 
-### Technology 
+### Features 
 - UserDefaults
 - Delegate
 ### Result
