@@ -63,7 +63,7 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { action, view, completionHandler in
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [unowned self] action, view, completionHandler in
             let globalIndex: Int = self.getIndexForSection(in: indexPath)
             self.notes.deleteNote(&self.filteredNotes, self.isFiltering, noteIndex: globalIndex)
             self.tableViewNotes.deleteRows(at: [indexPath], with: .left)
