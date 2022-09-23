@@ -21,7 +21,7 @@ extension UserDefaults {
   }
 
   func reset() {
-    self.removeObject(forKey: key)
+      self.removeObject(forKey: Keys.userDefaultsKey)
   }
 }
 

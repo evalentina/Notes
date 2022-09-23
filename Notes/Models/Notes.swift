@@ -19,7 +19,7 @@ class Notes: Codable {
     }
     
     init() {
-        self.notes = UserDefaults.standard.load(key: key, obj: Notes.self)?.notes ?? [Note]()
+        self.notes = UserDefaults.standard.load(key: Keys.userDefaultsKey, obj: Notes.self)?.notes ?? [Note]()
     }
     
     init(notes: [Note]) {
@@ -28,7 +28,7 @@ class Notes: Codable {
 
     
     public func saveNotesToLocal() {
-        UserDefaults.standard.save(key: key, obj: self)
+        UserDefaults.standard.save(key: Keys.userDefaultsKey, obj: self)
     }
     
     func copy(with zone: NSZone? = nil) -> Any {

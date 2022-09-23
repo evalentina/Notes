@@ -7,8 +7,11 @@
 
 import Foundation
 
-public let key = "Key"
-public let noteCell = "NoteCell"
+struct Keys {
+    static let userDefaultsKey = "Key"
+    static let noteCellKey = "NoteCell"
+}
+
 
 enum NoteSceneType {
   case isCreatingNewNote

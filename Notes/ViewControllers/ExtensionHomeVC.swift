@@ -12,7 +12,7 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: noteCell, for: indexPath) as! NoteTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Keys.noteCellKey, for: indexPath) as! NoteTableViewCell
         let globalIndex: Int = getIndexForSection(in: indexPath)
         let note = filteredNotes[globalIndex]
         cell.note = note
