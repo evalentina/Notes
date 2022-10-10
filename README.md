@@ -5,6 +5,8 @@
 - Delegate
 ### Result
 
-https://user-images.githubusercontent.com/106734321/189724673-fe8e24f9-4faf-4d6e-98ae-3bd6946357e1.mov
+https://user-images.githubusercontent.com/106734321/194911048-2eccb3f0-dcb0-4b58-a7a5-fff62a9b1bcc.mov
+
+
 
 
