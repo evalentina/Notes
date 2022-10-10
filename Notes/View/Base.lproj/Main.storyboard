@@ -47,14 +47,14 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="M9P-WQ-H7V" secondAttribute="trailing" id="12y-2e-uT6"/>
                                                 <constraint firstItem="GuL-ma-HlH" firstAttribute="top" secondItem="lwJ-PW-zgo" secondAttribute="topMargin" id="1nQ-Cx-l79"/>
+                                                <constraint firstItem="M9P-WQ-H7V" firstAttribute="leading" secondItem="lwJ-PW-zgo" secondAttribute="leading" constant="20" symbolic="YES" id="EqS-Eh-xVF"/>
                                                 <constraint firstItem="GuL-ma-HlH" firstAttribute="leading" secondItem="lwJ-PW-zgo" secondAttribute="leadingMargin" id="IXG-ql-vAG"/>
                                                 <constraint firstItem="M9P-WQ-H7V" firstAttribute="top" secondItem="GuL-ma-HlH" secondAttribute="bottom" constant="3" id="Z7j-s2-a3V"/>
                                                 <constraint firstAttribute="trailing" secondItem="GuL-ma-HlH" secondAttribute="trailing" id="irL-If-Yb8"/>
-                                                <constraint firstItem="M9P-WQ-H7V" firstAttribute="leading" secondItem="lwJ-PW-zgo" secondAttribute="leading" constant="20" symbolic="YES" id="wDe-N3-AOi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                        <inset key="separatorInset" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="separatorInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                         <connections>
                                             <outlet property="contentNote" destination="M9P-WQ-H7V" id="8Lc-XF-z8Z"/>
                                             <outlet property="titleNote" destination="GuL-ma-HlH" id="0vI-gO-7SZ"/>
@@ -74,9 +74,9 @@
                                             <segue destination="KoL-Q8-ekm" kind="show" identifier="goToNewNoteVC" id="ZIZ-uq-6bC"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="91" style="plain" systemItem="fixedSpace" id="HjT-Gu-nkZ"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="sbz-AS-NHt"/>
                                     <barButtonItem title="0 Notes" id="G09-nx-5ax"/>
-                                    <barButtonItem width="164" style="plain" systemItem="fixedSpace" id="M1y-It-8Cm"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bvo-bD-NX2"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -125,6 +125,9 @@
                                                 <rect key="frame" x="20" y="0.0" width="374" height="35"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="KoL-Q8-ekm" id="p1g-KE-jlG"/>
+                                                </connections>
                                             </textField>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TFh-yQ-4hF">
                                                 <rect key="frame" x="20" y="35" width="374" height="713"/>
@@ -132,6 +135,9 @@
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="KoL-Q8-ekm" id="xVi-DI-wy4"/>
+                                                </connections>
                                             </textView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -194,7 +200,7 @@
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemYellowColor"/>
     <resources>
-        <image name="plus" catalog="system" width="32" height="32"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
